@@ -22,7 +22,7 @@ details[open] .plus{transform:rotate(45deg)}
   .navlinks{display:none !important}
   .hero-title{font-size:44px !important}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none !important}}
+@media (prefers-reduced-motion:reduce){*{transition:none !important}.hero-video{display:none !important}}
 </style>
 <style>html{scroll-behavior:smooth}</style>
 </head>
@@ -43,14 +43,15 @@ details[open] .plus{transform:rotate(45deg)}
     </div>
   </header>
 
-  <!-- HERO with video slot -->
+  <!-- HERO with video -->
   <section id="inizio" style="position: relative; overflow: hidden; background: radial-gradient(ellipse 80% 70% at 70% 30%, #163A5C 0%, #0F2A44 55%, #0A1C2E 100%); color: #F6F1E7">
-    <div aria-label="Spazio per il video di Piazza San Marco" style="position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: flex-end; padding: 24px">
-      <div style="border: 1px dashed rgba(201,164,92,.55); border-radius: 12px; padding: 10px 16px; font-size: 12px; color: #E3CB92; background: rgba(10,28,46,.55)">[ VIDEO DI SFONDO: Piazza San Marco all’alba, con piccioni e acqua in movimento · da generare con Higgsfield ]</div>
-    </div>
-    <img src="mark-gold.svg" alt="" aria-hidden="true" style="position: absolute; right: 6%; top: 40px; width: 360px; height: auto; opacity: .10">
-    <div style="position: relative; max-width: 1120px; margin: 0 auto; padding: 128px 24px 144px; display: flex; flex-direction: column; gap: 24px">
-      <p style="margin: 0; font-size: 14px; font-weight: 500; color: #C9A45C; letter-spacing: .04em">Milano · San Siro</p>
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="hero-sanmarco-poster.jpg" aria-hidden="true" tabindex="-1" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0">
+      <source src="hero-sanmarco.webm" type="video/webm">
+      <source src="hero-sanmarco.mp4" type="video/mp4">
+    </video>
+    <div aria-hidden="true" style="position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(10,28,46,.94) 0%, rgba(10,28,46,.82) 40%, rgba(10,28,46,.52) 72%, rgba(10,28,46,.40) 100%)"></div>
+    <img src="mark-gold.svg" alt="" aria-hidden="true" style="position: absolute; right: 6%; top: 40px; width: 360px; height: auto; opacity: .10; z-index: 2">
+    <div style="position: relative; z-index: 3; max-width: 1120px; margin: 0 auto; padding: 128px 24px 144px; display: flex; flex-direction: column; gap: 24px">
       <h1 class="hero-title" style="margin: 0; max-width: 760px; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; font-size: 72px; line-height: 1.05; color: #F6F1E7">L’intelligenza artificiale al lavoro per il tuo negozio.</h1>
       <p style="margin: 0; max-width: 600px; font-size: 18px; color: #AEB7C3">Video e foto che fanno venire voglia di entrare. Assistenti che rispondono a messaggi e telefonate quando tu non puoi.</p>
       <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px">
